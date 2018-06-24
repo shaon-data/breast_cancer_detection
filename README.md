@@ -10,7 +10,7 @@ For downloading use
        `git clone https://github.com/ShaonMajumder/breast_cancer_detection.git`
 
 ## Data ।  উপাত্ত
-[Data Official Page](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29)
+### [Data Official Page](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29)
 ### Attribute Information: (class attribute has been moved to last column)
 
    |  Attribute | Domain |
@@ -26,6 +26,15 @@ For downloading use
    | 9. Normal Nucleoli | 1 - 10 |
    | 10. Mitoses | 1 - 10 |
    | 11. Class: | (2 for benign, 4 for malignant) |
+### Missing attribute values: 16
+
+   There are 16 instances in Groups 1 to 6 that contain a single missing 
+   (i.e., unavailable) attribute value, now denoted by "?".  
+
+### Class distribution:
+ 
+   Benign: 458 (65.5%)
+   Malignant: 241 (34.5%)
 
 ## Languages | ভাষা
 	py3.6.5
