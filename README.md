@@ -6,7 +6,7 @@
 For downloading use 
        `git clone https://github.com/ShaonMajumder/breast_cancer_detection.git`
 
-## Data
+## Data ।  উপাত্ত
 [Data Official Page](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29)
 ### Attribute Information: (class attribute has been moved to last column)
 
@@ -24,5 +24,5 @@ For downloading use
    | 10. Mitoses | 1 - 10 |
    | 11. Class: | (2 for benign, 4 for malignant) |
 
-## Languages
+## Languages | ভাষা
 	py3.6.5
