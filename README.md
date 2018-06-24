@@ -32,8 +32,8 @@ For downloading use
    (i.e., unavailable) attribute value, now denoted by "?".  
 
 ### Class distribution:
-	Benign: 458 (65.5%)
-	Malignant: 241 (34.5%)
+	| Benign: | 458 (65.5%) |
+	| Malignant: | 241 (34.5%) |
 
 ## Languages | ভাষা
 	py3.6.5
