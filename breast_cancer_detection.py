@@ -39,11 +39,13 @@ i = 0
 for p,s,idd in zip(prediction,samples,ids):
     i+=1
     if p == 2:
-        con = "benign"
+        con = "benign   "
+        safe = "safe"
     elif p == 4:
         con = "malignant"
+        safe = "unsafe"
 
-    print("Sample #%d -Sl. No%s- %s = %s"%(i,idd,s,con))
+    print("Sample #%d - %s = %s -> Patient Serial No.%s is %s"%(i,s,con,idd,safe))
 
 
 
@@ -73,11 +75,11 @@ benign = df[df['class']==2]
 malignant = df[df['class']==4]
 
 threedee2 = plt.figure("Sample Patient Data").gca(projection='3d')
-threedee2.scatter(benign['clump_thickness'],benign['mitoses'],benign['bland_chromatin'],label = 'benign '+str(len(benign)), color='b')
-threedee2.scatter(malignant['clump_thickness'],malignant['mitoses'],malignant['bland_chromatin'],label = 'malignant '+str(len(malignant)), color='r')
+threedee2.scatter(benign['clump_thickness'],benign['mitoses'],benign['uniformity_of_cell_size'],label = 'benign '+str(len(benign)), color='b')
+threedee2.scatter(malignant['clump_thickness'],malignant['mitoses'],malignant['uniformity_of_cell_size'],label = 'malignant '+str(len(malignant)), color='r')
 threedee2.set_xlabel('clump_thickness')
 threedee2.set_ylabel('mitoses')
-threedee2.set_zlabel('bland_chromatin')
+threedee2.set_zlabel('uniformity_of_cell_size')
 threedee2.legend(loc=1)
 
 
