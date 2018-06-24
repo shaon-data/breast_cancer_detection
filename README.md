@@ -1,5 +1,7 @@
 ﻿[![Detecting Breast Cancer](https://archive.ics.uci.edu/ml/assets/MLimages/Large14.jpg)](http://blog.robist.com/?p=1206)
 # Breast Cancer Detection | স্তন ক্যান্সার সনাক্ত করণ
+## Description | বর্ণনা
+	ক্ষতিকর এবং অক্ষতিকর ক্যান্সার সনাক্ত করণের জন্য
 ## Download 
 For downloading use 
        `git clone https://github.com/ShaonMajumder/breast_cancer_detection.git`
