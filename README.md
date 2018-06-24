@@ -42,3 +42,4 @@ For downloading use
 
 ## Comments
 	KNN hadnles outliers badly
+	Accuracy: 94%-98%

@@ -15,9 +15,26 @@ clf = neighbors.KNeighborsClassifier()
 clf.fit(X_train, y_train)
 
 accuracy = clf.score(X_test, y_test)
-print(accuracy)
+print("Accuracy of the model = %s"%accuracy)
 
-example_measures = np.array([4,2,1,1,1,2,3,2,1])
+#predicting_sample_inputs
+print("Taking Input from Samples.txt ....")
+sdf = pd.read_csv('samples.txt')
+
+ids = sdf['id'].as_matrix(columns=None)
+samples = sdf.as_matrix( columns=['clump_thickness', 'uniformity_of_cell_size','uniformity_of_cell_shape', 'marginal_adhesion','single_epithelial_cell_size', 'bare_nuclei', 'bland_chromatin', 'normal_nucleoli', 'mitoses'] ) #converting_to_2_dimensional_array
+
+example_measures = np.array(samples)
+example_measures = example_measures.reshape(len(example_measures),-1) #removing_error
 
 prediction = clf.predict(example_measures)
-print(prediction)
+
+i = 0
+for p,s,idd in zip(prediction,samples,ids):
+    i+=1
+    if p == 2:
+        con = "benign"
+    elif p == 4:
+        con = "malignant"
+
+    print("Sample #%d -Sl. No%s- %s = %s"%(i,idd,s,con))
