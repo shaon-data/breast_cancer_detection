@@ -1,2 +1,3 @@
 "Queries for sloving Issues" 	
 df.drop pandas 
+how to convert rows to nparrays pandas 

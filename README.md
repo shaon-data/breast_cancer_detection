@@ -32,10 +32,10 @@ For downloading use
    (i.e., unavailable) attribute value, now denoted by "?".  
 
 ### Class distribution:
-	| class | frequency |
-	| --- | --- |
-	| Benign: | 458 (65.5%) |
-	| Malignant: | 241 (34.5%) |
+| class | frequency |
+| --- | --- |
+| Benign: | 458 (65.5%) |
+| Malignant: | 241 (34.5%) |
 
 ## Languages | ভাষা
 	py3.6.5
