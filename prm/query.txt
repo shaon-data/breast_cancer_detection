@@ -1,1 +1,2 @@
 "Queries for sloving Issues" 	
+df.drop pandas 

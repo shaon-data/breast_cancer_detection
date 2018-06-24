@@ -39,3 +39,6 @@ For downloading use
 
 ## Languages | ভাষা
 	py3.6.5
+
+## Comments
+	KNN hadnles outliers badly
