@@ -3,6 +3,8 @@
 ## Description | বর্ণনা
 It is a machine learning and data science project focussing K-Nearest-Neighbor algorithm.
 ক্ষতিকর এবং অক্ষতিকর ক্যান্সার সনাক্ত করণের জন্য
+## Algorithm
+Labeled data so it is a supervised machine learning. And it is a classification problem so we used KNN for that.
 ## Download 
 For downloading use 
        `git clone https://github.com/ShaonMajumder/breast_cancer_detection.git`
