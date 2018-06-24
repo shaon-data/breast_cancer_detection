@@ -40,6 +40,9 @@ For downloading use
 ## Languages | ভাষা
 	py3.6.5
 
+## Results
+![Result](https://github.com/ShaonMajumder/breast_cancer_detection/blob/master/pics/mb2.png)
+
 ## Comments
 	KNN hadnles outliers badly
 	Accuracy: 94%-98%
