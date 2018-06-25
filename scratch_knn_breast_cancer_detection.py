@@ -38,25 +38,50 @@ feature_data = df.drop(['class'],1).astype(float).values.tolist()
 target_data = df['class'].astype(float).values.tolist()
 full_data = df.astype(float).values.tolist()
 
-#creating test train set
-random.shuffle(full_data) #shuffling
-
-test_size = 0.2
-
+# creating dictionary with unique value of target column
 train_set = test_set = {}
 for dicn in df['class'].unique():
     train_set[dicn] = test_set[dicn] = []
-#train_set = {2:[],4:[]} # creating dictionary of two classes
+# creating dictionary with unique value of target column
+
+#train_set = {2:[],4:[]} 
 #test_set = {2:[], 4:[]} # creating dictionary of two classes
+
+#Shuffling before creating test train set from keeping it out of any bias
+random.shuffle(full_data)
+
+#creating test train set
+test_size = 0.2
 train_data = full_data[:-int(test_size*len(full_data))] #first 80% of the data
 test_data = full_data[-int(test_size*len(full_data)):] #first 20% of the data
+#creating test train set
 
+# storing test and train data in target key dictionary
+for row in train_data:
+    # when last element of the row is target label
+    label = row[-1] # last element
+    row_without_label = row[:-1] # all element untill without and untill last element
+    train_set[label].append(row_without_label)
 
+for row in test_data:
+    # when last element of the row is target name or label
+    label = row[-1] # last element
+    row_without_label = row[:-1] # all element untill without and untill last element
+    test_set[label].append(row_without_label)
+# storing test and train data in target key dictionary
 
+correct = 0
+total = 0
 
-result = k_nearest_neighbors(dataset,new_features,k=3)
+for train_label in test_set:
+    for row in test_set[train_label]:
+        vote = k_nearest_neighbors(train_set,row,k=5)
+        if train_label == vote:
+            correct += 1
+        total += 1
+print('Accuracy %s'%(correct/total))
 
-[[plt.scatter(ii[0],ii[1], s=100, color=i) for ii in dataset[i]] for i in dataset]
-plt.scatter(new_features[0],new_features[1], color = result)
-plt.title('KNN')
-plt.show()
+##[[plt.scatter(ii[0],ii[1], s=100, color=i) for ii in dataset[i]] for i in dataset]
+##plt.scatter(new_features[0],new_features[1], color = result)
+##plt.title('KNN')
+##plt.show()

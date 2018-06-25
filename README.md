@@ -46,3 +46,4 @@ For downloading use
 ## Comments
 	KNN hadnles outliers badly
 	Accuracy: 94%-98%
+	Scratch Accuracy: 0.9742489270386266 %
