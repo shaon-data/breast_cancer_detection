@@ -1,3 +1,4 @@
 "Queries for sloving Issues" 	
 df.drop pandas 
 how to convert rows to nparrays pandas 
+get unique values in list python 
