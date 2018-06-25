@@ -45,5 +45,6 @@ For downloading use
 
 ## Comments
 	KNN hadnles outliers badly
-	Accuracy: 94%-98%
-	Scratch Accuracy: 0.9742489270386266 %
+	Accuracy: 94-98%
+	Scratch Accuracy: 92-99%
+	This is a test example but logistic regression will be better.
