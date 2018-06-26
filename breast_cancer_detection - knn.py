@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from sklearn import preprocessing, cross_validation, neighbors
+from sklearn import preprocessing, cross_validation, neighbors, svm
 
 
 from pandas import DataFrame
@@ -16,7 +16,7 @@ y = np.array(df['class']) #storing only the label column
 
 X_train, X_test, y_train, y_test = cross_validation.train_test_split(X,y,test_size=0.2) #20% data for test set, 80% for train set
 
-clf = neighbors.KNeighborsClassifier(n_jobs=-1)
+clf = neighbors.KNeighborsClassifier()
 clf.fit(X_train, y_train)
 
 accuracy = clf.score(X_test, y_test)
