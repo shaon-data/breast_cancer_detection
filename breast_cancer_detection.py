@@ -16,7 +16,7 @@ y = np.array(df['class']) #storing only the label column
 
 X_train, X_test, y_train, y_test = cross_validation.train_test_split(X,y,test_size=0.2) #20% data for test set, 80% for train set
 
-clf = neighbors.KNeighborsClassifier()
+clf = neighbors.KNeighborsClassifier(n_jobs=-1)
 clf.fit(X_train, y_train)
 
 accuracy = clf.score(X_test, y_test)
@@ -35,6 +35,8 @@ example_measures = example_measures.reshape(len(example_measures),-1) #removing_
 
 prediction = clf.predict(example_measures)
 
+
+
 i = 0
 for p,s,idd in zip(prediction,samples,ids):
     i+=1
@@ -49,7 +51,7 @@ for p,s,idd in zip(prediction,samples,ids):
 
 
 
-
+'''
 # Vizualization
 df = pd.read_csv('breast-cancer-wisconsin.data')
 df.replace('?', -99999, inplace=True) #making 99999 is big outlier for missing data. this is ignored or recognized by most of the algorithm as outliers
@@ -85,3 +87,4 @@ threedee2.legend(loc=1)
 
 plt.show()
 
+'''
