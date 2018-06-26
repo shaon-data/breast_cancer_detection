@@ -48,3 +48,4 @@ For downloading use
 	Accuracy: 94-98%
 	Scratch Accuracy: 92-99%
 	This is a test example but logistic regression will be better.
+	with more features and more data samples(N), the algorithm will be more accurate.
