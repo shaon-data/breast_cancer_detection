@@ -8,6 +8,9 @@ style.use('fivethirtyeight')
 import pandas as pd
 import random
 
+benign_class = 2
+malignant_class = 4
+
 def k_nearest_neighbors(data,predict,k=3):
     if len(data) >= k:
         warnings.warn('K is set to a value less than total voting groups!')
@@ -49,7 +52,7 @@ for i in range(trials):
     #Shuffling before creating test train set from keeping it out of any bias
     random.shuffle(full_data)
 
-    # creating dictionary with unique value of target column
+    ## creating dictionary with unique value of target column 2,4 - benign class, malignant class
     train_set = {}
     test_set = {}
     for dicn in df['class'].unique():
@@ -57,8 +60,8 @@ for i in range(trials):
         test_set[dicn] = []
     # creating dictionary with unique value of target column
 
-    ##train_set = {2:[],4:[]} 
-    ##test_set = {2:[], 4:[]} # creating dictionary of two classes
+    ##train_set = {benign_class:[],malignant_class:[]} 
+    ##test_set = {benign_class:[], malignant_class:[]} # creating dictionary of two classes
 
     #creating test train set
     test_size = 0.5
@@ -134,11 +137,11 @@ df.drop(['id'],1,inplace=True)
 full_data = df.astype(float).values.tolist()
 random.shuffle(full_data)
 
-# creating dictionary with unique value of target column
+## creating dictionary with unique value of target column 2,4 - benign class, malignant class
 full_data_set = {}    
 for dicn in df['class'].unique():
     full_data_set[dicn] = []
-# creating dictionary with unique value of target column
+## creating dictionary with unique value of target column 2,4 - benign class, malignant class
 
 for row in full_data:
     # when last element of the row is target label
@@ -156,9 +159,9 @@ for x in range(4):
     for row in predict_data:
         
         result,confidence = k_nearest_neighbors(full_data_set,row,k)
-        if result == 2:
+        if result == benign_class:
             con="benign"
-        elif result == 4:
+        elif result == malignant_class:
             con="malignant"
             
         print("%s , %s" %(con,confidence))
